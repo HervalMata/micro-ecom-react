@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: auth-depl
+  name: user-depl
 spec:
   replicas: 1
   selector:
@@ -11,7 +11,7 @@ spec:
     metadata:
       labels:
         app: user
-    specs:
+    spec:
       containers:
         - name: user
           image: thasup/user
